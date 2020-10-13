@@ -7,19 +7,19 @@ let statusText = true;
 
 function Contact() {
     return (
-        <article className="Contact">
+        <div className="Contact">
             <img className="avatar" src="https://randomuser.me/api/portraits/women/18.jpg"/>
             <div>
-                <p className="name">Tiffany Mckinney</p>
-
+                <h4 className="name">Tiffany Mckinney</h4>
                 <div className="status">
-                    <section className={statusIndicator? 'status-online':'status-offline'}></section>
-                    <p className="status-text">Online</p>
+                    <span className={statusIndicator? 'status-online':'status-offline'}></span>
+                    <span className="status-text">{statusText? 'Online':'Offline'} </span>
                 </div>
 
             </div>
-        </article>
+        </div>
     );
 }
+        
 
 export default Contact;
